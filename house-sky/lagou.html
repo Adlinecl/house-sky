@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+	<style class="text/css">
+		html,body,h5{
+			margin: 0;
+			padding: 0;
+		}
+		.head{
+			position: relative;
+			width: 100%;
+			height: 360px;
+			background-color: #00b38a;
+		}
+		a{
+			text-decoration: none;
+		}
+		li{
+			list-style: none;
+		}
+		.clearfix::after{
+			height: 0;
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.logo{
+			width: 112px;
+			height: 42px;
+			z-index: 2;
+			background-image: url("./image/logo_ec681ff.png");
+			position: absolute;
+			top: 76px;
+			left: 50%;
+			margin-left: -350px;
+			background-size: contain;
+		}
+		.middle{
+			position: relative;
+			z-index: 3;
+			width: 552px;
+		    margin: -205px auto 60px;
+		    padding: 62px 70px 68px 78px;
+		    background-color: #fff;
+		    border-radius: 2px;
+    		border: 1px solid #dce1e6;
+    		float: left;
+    		left: 45%;
+    		margin-left:-276px;
+		}
+		.left{
+			width: 290px;
+		}
+		.left, .zhong, .right{
+			float: left;
+		}
+		.lefthead{
+			/*z-index: 4;*/
+			position: relative;
+		    height: 33px;
+		    margin-bottom: 29px;
+		    border-bottom: 1px solid #ebebeb;
+		}
+		.lefthead>ul>li{
+			float: left;
+			/*text-align: center;*/
+			font-size: 16px;
+			position: relative;
+			line-height: 24px;
+			height: 33px;
+			width: 50%;
+		}
+		.mima{
+			color: #00b38a;
+		}
+		.leftbody{
+			width: 290px;
+			height: 212px;
+			/*z-index: 4;*/
+			/*border: 1px solid red;*/
+		}
+		.shuru, .shumima{
+			position: relative;
+			width: 290px;
+			height: 44px;
+			border-bottom: 1px solid #ebebeb;
+			/*border: 1px solid red;*/
+		}
+		.shuru span, .shumima span{
+			font-size: 16px;
+			height: 44px;
+			line-height: 44px;
+			color: gray;
+		}
+		.shumima, .wangji{
+			margin-top: 20px;
+		}
+		.wangji{
+			/*border: 1px solid red;*/
+			width: 290px;
+			height: 14px;
+		}
+		.wangji a{
+			float: right;
+			margin-top: -5px;
+			font-size: 14px;
+			color: #00b38a;
+		}
+		.enter{
+    		background-color: #00b38a;
+    		height: 46px;
+    		margin-top: 24px;
+		}
+		.enter a{
+			color: #fff;
+			height: 46px;
+			line-height: 46px;
+			font-size: 18px;
+			display: block;
+			text-align: center;
+		}
+		.zhong{
+			position: relative;
+		    border-left: 1px dashed #ededed;
+		    height: 274px;
+		    color: #d8d8d8;
+		    margin: 0 52px;
+		}
+		.right{
+			width: 150px;
+    		padding-top: 26px;
+		}
+		.right h5{
+			margin: 44px 0 8px;
+    		color: #555;
+    		font-size: 14px;
+    		font-weight: 500;
+		}
+		.right a{
+			height: 22px;
+		    font-size: 16px;
+		    color: #00b38a;
+		    /*padding-right: 23px;*/
+		    /*background-image: url("./image/icon-arrow-right_f36c0d6.png");
+		    background-repeat: no-repeat;*/
+		}
+		.right a img{
+			margin: -2px 3px;
+
+		}
+		.right>ul>li{
+			float: left;
+		}
+
+		input{
+			/*padding: 10px 5px;*/
+			border: 0;
+			outline: none;
+			vertical-align: -12px;
+		}
+		.tupian{
+			margin-top: 12px;
+			text-align: center;
+		}
+		.tupian>ul>li{
+			float: left;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="head">
+		<a href="#" class="logo"></a>
+		
+	</div>
+	<div class="middle">
+		<div class="left">
+			<div class="lefthead">
+				<ul class="clearfix">
+					<li class="mima">密码登录</li>
+					<li>验证码登录</li>
+				</ul>
+			</div>
+			<div class="leftbody">
+				<div class="shuru">
+					<input type="text" placeholder="请输入常用手机号" name="username">
+					<!-- <span>请输入常用手机号</span> -->
+				</div>
+				<div class="shumima">
+					<input type="password" placeholder="请输入密码" name="password">
+					<!-- <span>请输入密码</span> -->
+				</div>
+				<div class="wangji">
+					<a href="#">忘记密码?</a>
+				</div>
+				<div class="enter">
+					<a href="#">登录</a>
+				</div>
+			</div>
+		</div>
+		<div class="zhong"></div>
+		<div class="right">
+			<h5>还没有注册账号</h5>
+			<a href="#">立即注册</a>
+			<a href="#"><img src="./image/icon-arrow-right_f36c0d6.png" alt=""></a>
+			<h5>使用以下账号直接登录:</h5>
+			<ul class="clearfix tupian">
+				<li><a href="#" class="one"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$(".enter").click(function(){
+				var username = "111";
+				var password = "123456";
+				var enterUserName = $("input[name='username']").val();
+                var enterPassword = $("input[name='password']").val();
+                if(enterUserName == username && enterPassword == password){
+                    alert("登录成功！");
+                    location.href="https://www.lagou.com/";
+                }else {
+                    alert("登陆失败！");
+                }
+			})
+		})
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+	<style type="text/css">
+		 ul,li {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        .clearfix::after {
+            clear: both;
+            display: block;
+            content: "";
+            height: 0;
+        }
+        .imgbox{
+            list-style: none;
+            width: 1500px;
+            margin-left: -300px;
+        }
+        .imgbox>li{
+            width: 300px;
+            height: 300px;
+        }
+        .imgbox>li {
+            float: left;
+            line-height: 300px;
+            text-align: center;
+            font-size: 50px;
+            color: yellow;
+        }
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            margin: 0 auto;
+            position: relative;
+            /*overflow: hidden;*/
+            box-shadow: 1px 1px red;
+        }
+		.left {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .right {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+		.icon{
+			position: absolute;
+			bottom: 0;			
+			left: 50px;
+		}
+		.icon li{
+			float: left;
+			width: 20px;
+			height: 20px;
+			background-color: #000;
+			margin: 0 10px;
+		}
+		.icon li.selected {
+            background: red;
+        }
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="imgbox clearfix">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		<ul class="icon">
+			<li></li>
+			<li class="selected"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<button class="left">向左移动</button>
+		<button class="right">向右移动</button>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			var index = $(".icon li.selected").index();
+            $(".left").click(function(){
+                $(".imgbox").stop(true,true).animate({
+                    marginLeft: "-=300px",
+                },500,function(){
+                    var first = $(".imgbox li").first();
+                    var last = $(".imgbox li").last();
+                    first.insertAfter(last);
+                    $(".imgbox").css("margin-left","-300px");
+
+                })
+                  if(index == 4) { index = -1; }
+                $(".icon li").eq(index+=1).addClass("selected").siblings().removeClass("selected");
+           
+            })
+            $(".right").click(function(){
+                $(".imgbox").stop(true,true).animate({
+                    marginLeft:"+=300px",
+                },500,function(){
+                    var first = $(".imgbox li").first();
+                    var last = $(".imgbox li").last();
+                    last.insertBefore(first);
+                    $(".imgbox").css("margin-left","-300px");
+                })
+                 if(index == 0) { index = 5; }
+                 $(".img-box li").eq(index).fadeIn().siblings().fadeOut()
+                $(".icon li").eq(index-=1).addClass("selected").siblings().removeClass("selected");
+            })
+        })
+  		
+	</script>
+</body>
+</html>

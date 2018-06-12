@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+	<style type="text/css">
+		input[type='checkbox']{
+			width: 40px;
+			height: 40px;
+		}
+
+	</style>
+</head>
+<body>
+	<br><br><br><br>
+	<button class="quanxuan">全选</button>
+	<button class="quxiao">取消全选</button>
+	<button class="fanxuan">反选</button>
+	<br><br><br>
+	<label for="ID1">选项1</label>
+    <input type="checkbox" id="ID1"><br/>
+    <label for="ID2">选项1</label>
+    <input type="checkbox" id="ID2"><br/>
+    <label for="ID3">选项1</label>
+    <input type="checkbox" id="ID3">
+
+	<script type="text/javascript">
+		// $(function(){
+		// 	$("button[class='quanxuan']").click(function(){
+		// 		$("input[type='checkbox']").prop({ checked:true });	
+		// 	})
+		// 	$("button[class='quxiao']").click(function(){
+		// 		$("input[type='checkbox']").prop({ checked:false });	
+		// 	})
+  //  			$("button[class='fanxuan']").click(function(){
+  //  				$("input[type='checkbox']").each(function(index,aw){
+  //  					$(aw).prop({ checked:!$(aw).prop("checked")});
+  //  				})
+  //  			})
+		// })
+		$(function(){
+			$(".quanxuan").click(function(){
+				$("input:checkbox").prop('checked',true);
+			})
+			$(".quxiao").click(function(){
+				$("input:checkbox").prop({checked:false});
+			})
+			$(".fanxuan").click(function(){
+				$("input:checkbox").each(function(index,demo){
+					$(demo).prop({ checked:!$(demo).prop("checked")})	
+				})
+			})
+		})
+
+
+	</script>
+</body>
+</html>
