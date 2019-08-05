@@ -5,5 +5,5 @@
         选项卡newsfang.HTML，只不过把点击的事件换成了hover事件</br>
           全选，取消全选和反选lianxi.html,quanxuan.html，label，prop，each，实现</br>
             类似于导航栏的菜单显示lianxi0.html，点谁谁的子元素出现，show，hide，方法实现</br>
-              lunbo.html，tab.html不仅实现轮播，而且每一张图片下面会对应方框标志</br>
+              lunbo.html，tab.html不仅实现轮播，而且每一张图片下面会对应方框标志</br>111
               
